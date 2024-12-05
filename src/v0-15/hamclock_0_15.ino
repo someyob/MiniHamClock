@@ -452,26 +452,7 @@ void loop(void) {
     get_prop();                    // with repeated requests
     #endif
   }
-/*
-  DST = ntp.isDST();
 
-  if (refresh_day) {
-    sun.setCurrentDate(ntp.year(), ntp.month(), ntp.day());
-    sunrise = static_cast<int>(sun.calcSunrise());
-    sunset = static_cast<int>(sun.calcSunset());
-    if (DST) {
-      sunrise += 60;
-      sunset += 60;
-    }
-    #ifdef DEBUG
-    sprintf(buffer, "%d/%d/%d", ntp.day(), ntp.month(), ntp.year());
-    Serial.println(buffer);
-    sprintf(buffer, "Sunrise at %02d:%02d", sunrise/60, sunrise%60);
-    Serial.println(buffer);
-    sprintf(buffer, "Sunset at %02d:%02d", sunset/60, sunset%60);
-    Serial.println(buffer);
-    #endif
-  } */
 
   switch(menu_encoder) {
     case TIME_SCREEN:
@@ -576,23 +557,23 @@ void loop(void) {
             tft.println(DAYLIGHT_SAVINGS);
           else
             tft.println(STANDARD_TIME);
-          if (refresh_day) {
-            sun.setCurrentDate(ntp.year(), ntp.month(), ntp.day());
-            sunrise = static_cast<int>(sun.calcSunrise());
-            sunset = static_cast<int>(sun.calcSunset());
-            if (DST) {
-              sunrise += 60;
-              sunset += 60;
-            }
-            #ifdef DEBUG
-            sprintf(buffer, "%d/%d/%d", ntp.day(), ntp.month(), ntp.year());
-            Serial.println(buffer);
-            sprintf(buffer, "Sunrise at %02d:%02d", sunrise/60, sunrise%60);
-            Serial.println(buffer);
-            sprintf(buffer, "Sunset at %02d:%02d", sunset/60, sunset%60);
-            Serial.println(buffer);
-            #endif
-          }
+
+	    sun.setCurrentDate(ntp.year(), ntp.month(), ntp.day());
+	    sunrise = static_cast<int>(sun.calcSunrise());
+	    sunset = static_cast<int>(sun.calcSunset());
+	    if (DST) {
+	      sunrise += 60;
+	      sunset += 60;
+	    }
+	    #ifdef DEBUG
+	    sprintf(buffer, "%d/%d/%d", ntp.day(), ntp.month(), ntp.year());
+	    Serial.println(buffer);
+	    sprintf(buffer, "Sunrise at %02d:%02d", sunrise/60, sunrise%60);
+	    Serial.println(buffer);
+	    sprintf(buffer, "Sunset at %02d:%02d", sunset/60, sunset%60);
+	    Serial.println(buffer);
+	    #endif
+          
           refresh_day = false;
         }
 
