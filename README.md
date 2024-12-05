@@ -6,7 +6,7 @@ It's a pretty small and relatively trivial version of that, but it's main purpos
 
 Secondly, every 2 hours it downloads HF propagation conditions from the hamqsl.com website as xml data, parses it, and presents it to the user.  Along with the hamqsl.com info, it calculates and displays the day's sunrise and sunset times.
 
-Thirdly, it talks to my MQTT broker which as an ESP8266 device in my shed that publishes the current weather on a 5 minute interval.  It then plots that data on 3 different line graphs: temperature, relative humdity and barometric pressure for the past 20 hours or so.
+Thirdly, it talks to my MQTT broker (a Raspberry Pi) which has an ESP8266 device in my shed as a client.  It publishes the current weather on a 5 minute interval.  The clock then plots that data on 3 different line graphs: temperature, relative humdity and barometric pressure for the past 20 hours or so.
 
 All of this information is presented on separate screens as shown below.  The user can select the various screens using the rotary encoder fitted to the top of the clock.  Left to itself, it will timeout after 60 seconds from the TIME SCREEN and cycle automatically through each of the other screens, each displayed for 10 seconds.
 
