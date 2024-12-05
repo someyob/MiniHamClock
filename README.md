@@ -12,7 +12,7 @@ All of this information is presented on separate screens as shown below.  The us
 
 This particular clock is based on the ESP32 S3 in an arduino uno form factor, with an SPI driven TFT display.  It's just the hardware I happened to have lying around.  If you have other hardware, you can probably adapt the code accordingly without too much trouble.  The simple schematic is in this repo.
 
-The STLs and SketchUp models are here for 3D printing, or you can pick them up at https://www.printables.com/model/1090178-esp32-s3-uno-clock-w-22-qvga-tft-display.  Note that the model is based on the Uno formfactor microcontroller.  
+The STLs and SketchUp models are here for 3D printing, or you can pick them up at https://www.printables.com/model/1090178-esp32-s3-uno-clock-w-22-qvga-tft-display.  Note that the model is based on the Uno type microcontroller.  
 
 STARTUP SCREEN:
 ![PXL_20241205_163916620](https://github.com/user-attachments/assets/0983c437-5331-4b12-bc85-108717133926)
