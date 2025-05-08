@@ -2,7 +2,7 @@
 
 This device was inspired by the HamClock software popular with Shortwave Radio listeners and Ham Radio operators.  (https://qso365.co.uk/2024/01/hamclock/)
 
-It's a pretty small and relatively trivial version of that, but it's main purpose was just to give me a quick look at what the current UTC time is without having to do arithmetic in my head (sad, I know).
+It's a pretty small and relatively trivial version of that, but its main purpose was just to give me a quick look at what the current UTC time is without having to do arithmetic in my head (sad, I know).
 
 Secondly, every 2 hours it downloads HF propagation conditions from the hamqsl.com website as xml data, parses it, and presents it to the user.  Along with the hamqsl.com info, it calculates and displays the day's sunrise and sunset times.
 
